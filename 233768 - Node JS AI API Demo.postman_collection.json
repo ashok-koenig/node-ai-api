@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "70789424-5ebd-46e2-a2ca-28cb24a9477e",
+		"name": "233768 - Node JS AI API Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29487787"
+	},
+	"item": [
+		{
+			"name": "Users API",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"name\":\"Bob\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"John peter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task Manager API",
+			"item": [
+				{
+					"name": "Get all tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a task by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"title\": \"Task 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"title\": \"Task 3 - Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a task by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OPENAI - GPT - API - Demo",
+			"item": [
+				{
+					"name": "GPT Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"explain the ai in simple terms\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/chat",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"dog actively playing with balls\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/generate-image",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"generate-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cover image generate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"Blogs have evolved from personal diaries to influential sources of information, with over 600 million active blogs online. Whether you're looking to inspire, educate, or connect with others, creating a blog can offer personal gratification and even become a sustainable source of revenue through various monetization strategies. Choose a topic you're passionate about to engage your readers effectively and consider exploring the top 20 most popular types of blogs for inspiration and examples.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/image-cover",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"image-cover"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blog summary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"There are 600 million active blogs on the Internet, (the blogosphere) accounting for one-third of all the websites published. Starting off as online personal diaries, blogs have evolved dramatically over the last two decades to become influential sources of information on virtually any topic. You can create a blog to inspire, to educate, or to connect with others. But blogging is not just for your readers. It’s also for yourself. There’s a lot of gratification that comes with expressing yourself in new, digital forms by learning how to make a website. Finally, when you start growing your readership, blogging can become a sustainable stream of revenue. There are plenty of creative ways to monetize your blog as it grows, from affiliate links to banner advertising, to self-publishing and sponsored posts.  Whichever your motivation, there’s one golden rule to follow: choose a topic you are deeply passionate about. After all, passion is infectious. The more engaged you are with your subject, the easier it will convey your ideas, opinions, and emotions—and engage your readers with you. To help you get started, we’ve narrowed down the list of the top 20 most popular types of blogs, plus real Wix user examples and website types. Whether it’s food or fashion, we hope you’ll find a topic you’re excited about and feel a calling to contribute to.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog-summary",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog-summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File Upload Demo",
+			"item": [
+				{
+					"name": "Upload a file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/sasho/Downloads/Bus_Ticket_TU8U47782868-Coim-Bang-3-Aug.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/upload",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload a file to disk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/sasho/Downloads/pexels-george-desipris-792381.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/upload-disk",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload-disk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload a file to memory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/sasho/Downloads/tone-test.mp3"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/upload-memory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload-memory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Whisper Speech to Text API",
+			"item": [
+				{
+					"name": "Open AI transcribe audio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "audio",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/genevieve.wav"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/transcribe-audio",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transcribe-audio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Google Cloud AI API Demo",
+			"item": [
+				{
+					"name": "Analyze image text",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/nelson-mandela-quote.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-text",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-text"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze label",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/nelson-mandela-quote.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-label",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-label"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze Object",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/nelson-mandela-quote.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-object",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-object"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze text sentiment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"Just one small positive thought in the morning can change your whole day — Dalai Lama \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-sentiment",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-sentiment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze text entity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"Just one small positive thought in the morning can change your whole day — Dalai Lama \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-entity",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-entity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze text syntax",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"Just one small positive thought in the morning can change your whole day — Dalai Lama \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-syntax",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-syntax"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Open AI Image and nlp analysis",
+			"item": [
+				{
+					"name": "Image analysis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/nelson-mandela-quote.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-image",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Text Analysis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"Just one small positive thought in the morning can change your whole day Dalai Lama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-text",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-text"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Media Intelligence API",
+			"item": [
+				{
+					"name": "Image analysis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/nelson-mandela-quote.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/analyze-image",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Open AI transcribe audio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "audio",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/genevieve.wav"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/transcribe-audio",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transcribe-audio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Summarize transcript",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"This dynamic workshop aims to provide up-to-date information on pharmacological approaches, issues, and treatment in the geriatric population to assist in preventing medication-related problems, appropriately and effectively managing medications and compliance, period. The concept of polypharmacy, parentheses, taking multiple types of drugs, parentheses, will also be discussed, comma, as this is a common issue that can impact adverse side effects in the geriatric population, period. Participants will leave with the knowledge and considerations of common drug interaction and how to minimize effects that limit function, period. Summit Professional Education is approved provider of continuing education, period. This course is offered for six units, period. This course contains content classified under both the domain of occupational therapy and professional issues, period.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/summarize-transcript",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"summarize-transcript"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Smart Report API",
+			"item": [
+				{
+					"name": "Smart Report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "audio",
+									"type": "file",
+									"src": "/D:/NodeJS/233768-Node-AI-API/Sample-Input-Files/genevieve.wav"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/smart-report",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smart-report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation Error Demo API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"explain the ai in simple terms\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/chat",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
